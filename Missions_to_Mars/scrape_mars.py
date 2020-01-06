@@ -4,15 +4,13 @@ import pandas as pd
 
 
 def init_browser():
-    # @NOTE: Replace the path with your actual path to the chromedriver
-     executable_path = {'executable_path': 'chromedriver.exe'}
+     executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
      browser = Browser('chrome', **executable_path, headless=False)
      return browser
 
 mars_data= {}
 def mars_news_scrape():
      browser = init_browser()
-    #Visit Nasa News url  using splinter module
 
      Nasa_url = 'https://mars.nasa.gov/news/'
      browser.visit(Nasa_url)
